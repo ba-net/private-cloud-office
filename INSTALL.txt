@@ -1,0 +1,148 @@
+
+BA.net Private Cloud Office Self-Hosted
+https://ba.net/office/
+
+
+1. Download banet-office-os-light-v183.img.gz (1.3 GBytes)
+
+From this link
+https://ssl.ba.net/banet-private-cloud-office-os/
+
+
+2. Burn the image to your pendrive with https://www.balena.io/etcher/
+
+2.1 Select the img file banet-office-os-light-v183.img.gz 
+2.2 Select your USB flash drive
+
+
+3. Boot your machine from the pendrive
+
+On your motherboard bios set boot type legacy, not uefi
+os type other, not windows. more details on the FAQ
+
+1st boot can take a few minutes to complete
+
+
+
+
+Configuration
+_____________
+
+login with
+
+username: root
+password: banet
+
+to find out local ip address run
+
+ip addr
+it should result in 192.168.1.139 or similar
+
+connect with a web browser from a separate machine to
+http://192.168.1.139
+
+user: admin
+password: banet-demo
+
+
+
+- Optional Hard Disk
+
+mount your hard disk to the root of the nextcloud server
+
+example
+mount /dev/sda1 /mnt
+
+cp -rp /var/www/html/nextcloud/data /mnt/data
+mv /var/www/html/nextcloud/data /var/www/html/nextcloud/data-original
+ln -s /mnt/data /var/www/html/nextcloud/data
+
+
+
+
+
+
+FAQ
+
+- Why use this Office OS Distribution ?
+
+Running on 100+ servers today
+
+Community tested at
+https://www.reddit.com/r/adblockvpn
+r/distrohopping announcement
+https://www.reddit.com/r/DistroHopping/comments/etgte0/\
+bootable_pendrive_nextcloud_onlyoffice/
+
+
+Tech Support at iphone@ba.net
+
+
+- How to test the contents of the OS distribution ?
+
+The live pendrive boot can be used on a machine without hard disk. So you can
+test without risking your computer data.
+
+In addition the system code is open, and can be inspected without booting by 
+mounting the .img.gz file as follows
+
+gunzip banet-office-light-v183.img.gz
+mount /dev/sdb1 /mnt/part1
+mount /dev/sdb1	/mnt/part2
+mount /dev/sdb1	/mnt/part3
+
+You will find stock centos 7, nextcloud Hub v18.0, 
+mariadb, php 7.2, apache, wordpress, pihole adblock dns. 
+All code open source LGPL V3
+
+
+- OnlyOffice Light
+
+Configure from Nextcloud using Settings, OnlyOffice
+Replace 192.168.15.139 with your local ip
+
+
+- Extra Apps
+
+Wordpress
+admin/banet-demo
+Pi-Hole
+admin/safebox
+
+
+- MySQL root pass
+
+Located at /root/mysql.txt
+
+
+- Install on a HD or SSD Drive
+
+you can install on HD or SSD Drive as follows
+
+gunzip banet-office-light-v183.img.gz
+dd banet-office-light-v183.img /dev/sdX
+
+Where X is the letter of your drive. The image will create a 16 GB drive, 
+which can be later expanded with parted. 
+yum install parted
+
+
+- USB Boot (recommended for production) more info at
+https://ba.net/o/blog/usb-boot-howto1.html
+
+- Optional VirtualBox, VMware, Windows Server Install 
+https://ba.net/o/blog/how-to-boot-banet-office-in-virtualbox1.html
+
+- Integrated Full OnlyOffice 
+https://ba.net/private-cloud-office/business1.html
+
+- Remote Teams, Auto SSL Certs, Public Web URL
+https://ba.net/private-cloud-office/business1.html
+
+
+
+
+Contact us with any questions at
+iphone@ba.net
+
+
