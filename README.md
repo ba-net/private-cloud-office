@@ -4,32 +4,9 @@
 <meta property="og:image" content="https://ba.net/adblock/vpn/server/pendrive.png">
 
 
-<!--#include file="header.html" -->
 
 <p>
-<!--#include file="linkback.html" -->
-
-
-<script type="text/javascript">
-var uagent = navigator.userAgent.toLowerCase();
-function DetectIphone()
-{
-   if (uagent.search("iphone") > -1) return true;
-   if (uagent.search("ipod") > -1) return true;
-   if (uagent.search("android") > -1) return true;
-   else
-      return false;
-}
-   
-if (!DetectIphone()) {
-//document.write("<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.10,user-scalable=yes\" /> ");
-};
-
-</script>
-
-
-<p>
-<font size=5>
+<font size=4>
 
 
 <table width=650 cellspacing=75>
@@ -69,9 +46,6 @@ Support Forum
 <p>
 <a href="https://ssl.ba.net/banet-private-cloud-office-os/">
 Download (1.3 GBytes)</a> <font color=red>free</font>
-
-<a href="https://www.siteadvisor.com/sites/ba.net/" TARGET=_blank>
-<img src="https://ba.net/gifs/rating_mcafeesecure.png" width=70 height=30 border=0></a>
 
 <p>
 <a href="https://ssl.ba.net/banet-private-cloud-office-os/INSTALL.txt" target=_blank>
@@ -120,54 +94,7 @@ width=100 height=562 align=right border=0>
 <center>
 <p>
 
-<script type="text/javascript">
-if (!DetectIphone()) {
-document.write("<video id='my-video2' class='video-js' controls preload='auto' width='800' height='500' poster='https://ba.net/w/pendrive.jpg' data-setup='{}'>");
-}
-if (DetectIphone()) {
-document.write("<video id='my-video2' class='video-js' controls preload='auto' width=" + window.innerWidth + " height='250' poster='https://ba.net/w/pendrive.jpg' data-setup='{}'>");
-}
-</script>
 
-    <source src="https://ba.net/w/banet-pendrive-boot.mp4" type='video/mp4'>
-    <source src="nextcloud-onlyoffice.webm" type='video/webm'>
-    <p class="vjs-no-js">
-    </p>
-  </video>
-
-
-<p><br>
-
-<script type="text/javascript">
-if (!DetectIphone()) {
-document.write("<video id='my-video' class='video-js' controls preload='auto' width='800' height='500' poster='https://ba.net/w/etcher.jpg' data-setup='{}'>");
-}
-if (DetectIphone()) {
-document.write("<video id='my-video' class='video-js' controls preload='auto' width=" + window.innerWidth + " height='250' poster='https://ba.net/w/etcher.jpg' data-setup='{}'>");
-}
-</script>
-
-    <source src="https://ba.net/w/etcher.mp4" type='video/mp4'>
-    <source src="nextcloud-onlyoffice.webm" type='video/webm'>
-    <p class="vjs-no-js">
-    </p>
-  </video>
-
-
-<p><br>
-
-
-<script type="text/javascript">
-if (!DetectIphone()) {
-document.write("<iframe src=https://ba.net/o/nc/hub.html width=800 height=500 frameborder=no framescrolling=no></iframe>");
-}
-if (DetectIphone()) {
-document.write("<iframe src=https://ba.net/o/nc/hub.html width=" + window.innerWidth + " height='250' frameborder=no framescrolling=no></iframe>");
-}
-</script>
-
-
-<p><br>
 
 </center>
 
